@@ -5,8 +5,7 @@ This repository contains a short extract from teaching material I contributed to
 The included sample demonstrates how I structured and explained core NLP concepts — in this case, tokenization — using the [Quarto](https://quarto.org/) publishing framework.  
 
 📄 **Live Demo**  
-View the fully rendered teaching sample here:  
-👉 [Tokenization Teaching Sample (HTML)](https://yingcheuk.github.io/nlp-teaching-sample/tokenization_sample.html)
+View the fully rendered teaching sample here: 👉 [Tokenization Teaching Sample (HTML)](https://yingcheuk.github.io/nlp-teaching-sample/tokenization_sample.html)
 
 ---
 
