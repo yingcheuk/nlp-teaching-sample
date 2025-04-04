@@ -4,10 +4,6 @@ This repository contains a short extract from teaching material I contributed to
 
 The included sample demonstrates how I structured and explained core NLP concepts — in this case, tokenization — using the [Quarto](https://quarto.org/) publishing framework.  
 
-Due to university policy, this is a self-contained example and not part of the full lecture content.  
-
----
-
 > 🧠 **Note:**  
 > This repository contains a small extract from a larger set of teaching materials I helped develop for an NLP-focused course. The full content covers a broad range of topics including:
 > 
@@ -17,3 +13,5 @@ Due to university policy, this is a self-contained example and not part of the f
 > - Transformer architectures (e.g. GPT)  
 > 
 > Due to university policy, only a limited portion is shared publicly. This sample is intended to demonstrate my teaching style and understanding of NLP concepts.
+
+---
