@@ -1,0 +1,92 @@
+---
+title: "Tokenization – Teaching Sample"
+format: html
+author: "Ying Cheuk Cheong"
+---
+
+## Introduction
+
+Tokenization is a fundamental step in natural language processing (NLP), where text is split into smaller units called *tokens*. While it may sound simple, designing robust tokenizers can be challenging due to language variations, punctuation, and edge cases.   
+
+
+This teaching sample explains basic tokenization using Python libraries such as `nltk` and `spaCy`.  
+
+---
+
+## 1. Word Tokenization with NLTK
+
+In this section, we will explore how to perform word tokenization using the `nltk` library.  
+
+```{python}
+#| eval: false
+
+import nltk
+from nltk.tokenize import word_tokenize
+
+text = "Contact john.doe@example.com or visit https://huggingface.co"
+tokens = word_tokenize(text)
+print(tokens)
+```
+
+
+```markdown
+## Example Output:
+['Contact', 'john.doe', '@', 'example.com', 'or', 'visit', 'https', ':', '//', 'huggingface.co']
+```
+
+::: {.callout-note}
+```markdown
+nltk.word_tokenize() handles contractions and punctuation better than basic .split().
+```
+:::
+
+---
+
+## 2. Tokenization with spaCy
+
+Next, we will look at how `spaCy` provides more robust tokenization based on linguistic rules.  
+
+
+```{python}
+#| eval: false
+
+import spacy
+
+nlp = spacy.load("en_core_web_sm")
+doc = nlp("Contact john.doe@example.com or visit https://huggingface.co")
+
+tokens = [token.text for token in doc]
+print(tokens)
+```
+
+```markdown
+## Example Output:
+['Contact', 'john.doe@example.com', 'or', 'visit', 'https://huggingface.co']
+```
+
+::: {.callout-note}
+```markdown
+NLTK splits on punctuation and symbols, while spaCy treats common patterns like email addresses and URLs as single tokens.  
+```
+:::
+
+---
+
+## Comparison: NLTK vs spaCy
+
+| Feature            | NLTK                          | spaCy                         |
+|--------------------|-------------------------------|-------------------------------|
+| Email Handling     | Splits into multiple tokens   | Recognized as one token       |
+| URL Handling       | Splits at `://` and `.`       | Recognized as one token       |
+| Contraction Handling | Keeps as separate words (`'s`) | Keeps contractions together   |
+
+
+---
+
+## Summary
+
+Tokenization is the first step in most NLP pipelines. Though simple in appearance, its behavior significantly affects downstream tasks like vectorization and parsing. Choosing the right tokenizer is key to building effective and reliable NLP models.    
+
+---
+
+*This sample was created for demonstration purposes and represents a standalone teaching extract, not full course material.*
